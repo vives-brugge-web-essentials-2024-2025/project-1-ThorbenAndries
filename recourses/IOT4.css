@@ -1,0 +1,366 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   box-sizing: border-box;
+}
+
+/* Algemene stijlen */
+body {
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  background-color: #99c294;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-image: url('/recourses/banner2.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 5vw 0;
+}
+
+.header h1 {
+  font-size: 2.5em;
+}
+
+.header p {
+  font-size: 1.2em;
+}
+
+/* Navigatiebalk */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  white-space: nowrap; /* Zorgt ervoor dat de navigatie-items op één regel blijven */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  overflow-x: auto; /* Maakt horizontaal scrollen mogelijk bij kleinere schermen */
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px; /* Zorgt voor een klikbare ruimte rond de tekst */
+}
+
+.navbar a:hover {
+  color: #a6e22d;
+}
+/* Secties */
+.section {
+  padding: 4vw;
+  text-align: center;
+}
+.section:nth-of-type(odd) {
+  background-color: #cfe0b2; /* Rood voor oneven secties */
+}
+
+.section h2 {
+  font-size: 2em;
+  color: #2d87a6;
+}
+
+.section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Sectie 3 - Kolommen */
+.columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Laat kolommen stapelen op kleinere schermen */
+  align-items: stretch; /* Zorgt voor gelijke hoogte */
+}
+
+.column {
+  flex: 1 1 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.column img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Contact sectie basisstijl */
+.contact-section {
+  background-color: #e0e0e0;
+  padding: 4% 5%;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Contactinformatie stijlen */
+.contact-info {
+  flex: 0 0 40%; /* Set contact info width to 40% */
+  background-color: #f5f5f5;
+  padding: 20px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  flex: 0 0 60%; /* Set contact form width to 60% */
+  background-color: #f5f5f5;
+  padding: 20px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.contact-info h3 {
+  color: #2d87a6;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #2d87a6;
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-icons i {
+  font-size: 1.2em;
+  color: #2d87a6;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #1a6b88;
+}
+
+/* Contact divider styling */
+.contact-divider {
+  width: 1px;
+  background-color: #333;
+}
+
+/* Contactformulier stijlen */
+.contact-form {
+  flex: 1 1 45%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.contact-form h3 {
+  color: #2d87a6;
+  margin-bottom: 15px;
+}
+
+/* Formulier groepsstijl met icoontjes */
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Icon positioning within form fields */
+.form-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #2d87a6;
+  font-size: 1.2em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Extra padding to make room for icons */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  resize: none; /* Disables resizing */
+}
+
+
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2d87a6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a6b88;
+}
+
+/* deze query's heb ik gedaan puur omdat ik er niet tegen kon als het scherm kleiner werd. Dat alles dan verdween of niet mooi werd weergegeven*/
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 1 100%;
+  }
+
+  /* Aanpassingen voor de navigatiebalk op kleine schermen */
+  .navbar ul {
+    flex-direction: row; 
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 0 8px; 
+  }
+
+  .navbar a {
+    font-size: 0.6em; 
+    padding: 8px 5px; 
+  }
+
+  button[type="submit"] {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .contact-info, .contact-form {
+    flex: 1 1 100%; 
+  }
+
+  .contact-divider {
+    display: none; 
+  }
+}
+/* Flex layout for fields side-by-side on small screens */
+@media (max-width: 480px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 15px); 
+    padding-left: 35px;
+  }
+}
+
+
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #2d87a6;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: #1a6b88;
+}
