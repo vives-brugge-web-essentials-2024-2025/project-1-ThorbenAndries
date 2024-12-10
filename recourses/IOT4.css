@@ -20,6 +20,9 @@ time, mark, audio, video {
    vertical-align: baseline;
    box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Algemene stijl voor de pagina*/
 body {
