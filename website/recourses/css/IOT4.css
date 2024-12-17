@@ -37,7 +37,7 @@ body {
 
 /* hoofding pagina */
 .header {
-  background-image: url('/recourses/image/banner2.jpg');
+  background-image: url('./recourses/image/banner2.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
